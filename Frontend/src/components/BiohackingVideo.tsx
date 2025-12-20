@@ -43,7 +43,7 @@ export default function BiohackingVideo() {
           style={{ objectPosition: "50% 0%" }}
         >
           {/* Replace this URL with your own video */}
-          <source src="/video/VideoLentes.mp4" type="video/mp4" />
+          <source src="https://1jasce7jeuzj98bv.public.blob.vercel-storage.com/VideoLentes.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
