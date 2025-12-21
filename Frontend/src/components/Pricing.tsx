@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "motion/react";
 import { Check } from "lucide-react";
 import eventImage from "../../public/img/unnamed.png";
+const CHECKOUT_URL =
+  "https://linktr.ee/rewirexperience?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnpYDi6K3tO85iDIHf5Vm7CZ9GTR7TAe4v7C65OsRSjhjfsDlCl1_FwmTSCVw_aem__wt09EbPZ1MPVsBe0F2W2g";
 
 export default function Pricing() {
   const tickets = [
@@ -15,7 +17,7 @@ export default function Pricing() {
         "Certificado de asistencia",
         "Coffee breaks incluidos",
       ],
-      link: "#",
+      link: CHECKOUT_URL,
       highlighted: false,
     },
     {
@@ -29,7 +31,7 @@ export default function Pricing() {
         "Kit de bienvenida premium",
         "Regalos exclusivos de sponsors",
       ],
-      link: "#",
+      link: CHECKOUT_URL,
       highlighted: true,
     },
     {
@@ -45,7 +47,7 @@ export default function Pricing() {
         "Networking exclusivo con speakers",
         "Plan personalizado post-evento",
       ],
-      link: "#",
+      link: CHECKOUT_URL,
       highlighted: false,
     },
   ];
@@ -180,6 +182,8 @@ export default function Pricing() {
 
               <a
                 href={ticket.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-full text-center transition-all duration-300 ${
                   ticket.highlighted
                     ? "bg-black text-white hover:bg-gray-800 hover:shadow-lg"
@@ -188,6 +192,7 @@ export default function Pricing() {
               >
                 Comprar entrada
               </a>
+
             </motion.div>
           ))}
         </div>

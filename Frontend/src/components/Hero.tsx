@@ -24,7 +24,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1765774407767-5b339ce355ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb25mZXJlbmNlJTIwZXZlbnR8ZW58MXx8fHwxNzY2MjQ4MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080')`,
+          backgroundImage: `url('https://1jasce7jeuzj98bv.public.blob.vercel-storage.com/caption%20%281%29.jpg')`,
         }}
       />
 

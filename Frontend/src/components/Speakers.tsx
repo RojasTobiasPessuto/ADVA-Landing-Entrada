@@ -125,17 +125,10 @@ export default function Speakers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer p-6 rounded-2xl hover:bg-gray-50 transition-colors"
               onClick={() => setSelectedSpeaker(index)}
             >
-              <div className="aspect-square rounded-2xl overflow-hidden mb-4 bg-gray-100">
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
-                />
-              </div>
-              <h5 className="mb-1">{speaker.name}</h5>
+              <h5 className="mb-2">{speaker.name}</h5>
               <p className="text-sm text-gray-500">{speaker.role}</p>
             </motion.div>
           ))}
@@ -176,21 +169,12 @@ export default function Speakers() {
                   </button>
 
                   {/* Speaker Info */}
-                  <div className="flex flex-col md:flex-row gap-8 items-start">
-                    {/* Image */}
-                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden flex-shrink-0 bg-gray-100">
-                      <img
-                        src={mainSpeakers[selectedSpeaker].image}
-                        alt={mainSpeakers[selectedSpeaker].name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
+                  <div className="flex flex-col gap-6 text-center w-full">
                     {/* Text Content */}
                     <div className="flex-1">
-                      <h3 className="mb-2">{mainSpeakers[selectedSpeaker].name}</h3>
-                      <p className="text-gray-500 mb-6">{mainSpeakers[selectedSpeaker].role}</p>
-                      <p className="text-gray-700 leading-relaxed">
+                      <h3 className="mb-3">{mainSpeakers[selectedSpeaker].name}</h3>
+                      <p className="text-gray-500 mb-6 text-lg">{mainSpeakers[selectedSpeaker].role}</p>
+                      <p className="text-gray-700 leading-relaxed text-lg">
                         {mainSpeakers[selectedSpeaker].description}
                       </p>
                     </div>
@@ -209,7 +193,7 @@ export default function Speakers() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <h2 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-500">EVENTO CONDUCIDO POR</h2>
+          <h4 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-500">EVENTO CONDUCIDO POR</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 max-w-4xl mx-auto overflow-hidden rounded-2xl">
             {hosts.map((host, index) => (
               <motion.div
@@ -234,7 +218,7 @@ export default function Speakers() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-500">EXPERIENCIAS A CARGO DE</h2>
+          <h4 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-500">EXPERIENCIAS A CARGO DE</h4>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-gray-200 max-w-4xl mx-auto overflow-hidden rounded-2xl">
             {experienceLeaders.map((leader, index) => (
               <motion.div

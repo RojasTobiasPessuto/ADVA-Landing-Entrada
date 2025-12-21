@@ -27,7 +27,7 @@ export default function LocationSection() {
           >
             <div className="relative h-full rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1759672573161-c6d6b861914d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwYnVpbGRpbmclMjBleHRlcmlvcnxlbnwxfHx8fDE3NjYxNTM3MTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://1jasce7jeuzj98bv.public.blob.vercel-storage.com/caption.jpg"
                 alt="Complejo Solanas - Punta del Este"
                 className="w-full h-full object-cover min-h-[600px]"
               />
