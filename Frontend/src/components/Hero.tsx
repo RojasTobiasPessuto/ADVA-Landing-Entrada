@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { MapPin, Calendar } from "lucide-react";
+import fondo from "../assets/fondo.png";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -24,12 +25,12 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://1jasce7jeuzj98bv.public.blob.vercel-storage.com/caption%20%281%29.jpg')`,
+          backgroundImage: `url(${fondo})`,
         }}
       />
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/70 to-gray-50/60" />
+      {/*<div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/70 to-gray-50/60" />*/}
 
       {/* Texture overlay */}
       <div

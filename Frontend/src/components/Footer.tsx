@@ -1,6 +1,6 @@
 import React from 'react';
 import { Instagram, MessageCircleMore, Ticket } from 'lucide-react';
-import logo from 'figma:asset/db58196d3fb000af2c136d0c9717696245d406cc.png';
+import logo from '../assets/bhenegros.png';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
           <div className="mb-8">
-            <img src={logo} alt="ADVA Logo" className="h-10 md:h-12 brightness-0 invert" />
+            <img src={logo} alt="Bhe Logo" className="h-10 md:h-12 brightness-0 invert" />
           </div>
 
           {/* Social media text */}

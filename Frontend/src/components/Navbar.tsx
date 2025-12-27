@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
+import logo from '../assets/bhenegros.png';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,10 +42,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          ? "bg-white/60 backdrop-blur-xl shadow-sm"
+          : "bg-transparent backdrop-blur-0"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -58,9 +58,9 @@ export default function Navbar() {
             className="hover:opacity-70 transition-opacity"
           >
             <img
-              src="https://1jasce7jeuzj98bv.public.blob.vercel-storage.com/_BHE%20PORTADA%20FAN%20PAGE%20FB%20%20%281%29.png"
+              src={logo}
               alt="Biohacking & Longevity Summit"
-              className="h-8 md:h-10 object-contain"
+              className="h-16 w-auto md:h-24 object-contain"
             />
           </button>
 
