@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 export default function Sponsors() {
-  // Placeholder sponsor logos (using simple text placeholders)
   const sponsors = [
     'SPONSOR 01',
     'SPONSOR 02',

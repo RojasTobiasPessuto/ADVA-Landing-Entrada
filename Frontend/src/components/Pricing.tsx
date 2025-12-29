@@ -192,7 +192,7 @@ export default function Pricing() {
                     duration: isVIP ? 1.8 : 2.2,
                     repeat: Infinity,
                     ease: "easeInOut",
-                    delay: index * 0.15, // evita que latan todos EXACTO al mismo tiempo
+                    delay: index * 0.15, 
                   }}
                   whileHover={{
                     scale: 1.08,

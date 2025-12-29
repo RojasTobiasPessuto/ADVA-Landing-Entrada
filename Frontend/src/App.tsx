@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   useEffect(() => {
-    // Load Google Fonts
+
     const link1 = document.createElement('link');
     link1.rel = 'preconnect';
     link1.href = 'https://fonts.googleapis.com';
@@ -33,7 +33,6 @@ export default function App() {
     link3.href = 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap';
     document.head.appendChild(link3);
 
-    // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';

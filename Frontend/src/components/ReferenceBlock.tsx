@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 import eventImage from '../assets/biohacking.png';
 
 export default function ReferenceBlock() {
-  // Countdown Timer - Fecha del evento: 26 de diciembre de 2025
   const eventDate = new Date('2025-12-26T00:00:00');
   
   const [timeLeft, setTimeLeft] = useState({

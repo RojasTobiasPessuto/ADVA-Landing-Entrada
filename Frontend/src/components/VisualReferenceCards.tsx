@@ -4,9 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 export default function VisualReferenceCards() {
   const [activeIndices, setActiveIndices] = useState([0, 0, 0, 0, 0, 0]);
 
-  // Define multiple images per position
   const imagesByPosition = [
-    // Position 0 - narrow (3 cols)
     [
       {
         image: 'https://images.unsplash.com/photo-1695462131822-368776114494?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMGJpb2hhY2tpbmclMjBldmVudHxlbnwxfHx8fDE3NjYxNTU1MTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -17,7 +15,6 @@ export default function VisualReferenceCards() {
         title: 'Mindfulness',
       },
     ],
-    // Position 1 - wide (5 cols)
     [
       {
         image: 'https://images.unsplash.com/photo-1571645163064-77faa9676a46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG5ldHdvcmtpbmclMjBjb25mZXJlbmNlfGVufDF8fHx8MTc2NjA3MTM3NXww&ixlib=rb-4.1.0&q=80&w=1080',
@@ -28,7 +25,6 @@ export default function VisualReferenceCards() {
         title: 'Science',
       },
     ],
-    // Position 2 - medium (4 cols)
     [
       {
         image: 'https://images.unsplash.com/photo-1632858280935-d5611683e434?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjBzdW1taXQlMjBlbmVyZ3l8ZW58MXx8fHwxNzY2MTU1NTE5fDA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -39,7 +35,6 @@ export default function VisualReferenceCards() {
         title: 'Breathwork',
       },
     ],
-    // Position 3 - medium (4 cols)
     [
       {
         image: 'https://images.unsplash.com/photo-1550305550-ff3ab47ab63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlJTIwaGFwcHklMjBwZW9wbGV8ZW58MXx8fHwxNzY2MTU1NTIwfDA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -50,7 +45,6 @@ export default function VisualReferenceCards() {
         title: 'Technology',
       },
     ],
-    // Position 4 - narrow (3 cols)
     [
       {
         image: 'https://images.unsplash.com/photo-1647796853261-a4112c2ba315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpdGF0aW9uJTIwd2VsbG5lc3MlMjBldmVudHxlbnwxfHx8fDE3NjYxNTU1MjB8MA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -61,7 +55,6 @@ export default function VisualReferenceCards() {
         title: 'Retreat',
       },
     ],
-    // Position 5 - wide (5 cols)
     [
       {
         image: 'https://images.unsplash.com/photo-1649073586428-e288125d930a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaW9oYWNraW5nJTIwdGVjaG5vbG9neSUyMGhlYWx0aHxlbnwxfHx8fDE3NjYxNTU1MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
@@ -76,7 +69,6 @@ export default function VisualReferenceCards() {
 
   const colSpans = ['md:col-span-3', 'md:col-span-5', 'md:col-span-4', 'md:col-span-4', 'md:col-span-3', 'md:col-span-5'];
 
-  // Each image rotates independently with different delays
   useEffect(() => {
     const intervals = imagesByPosition.map((_, index) => {
       return setInterval(() => {
@@ -85,7 +77,7 @@ export default function VisualReferenceCards() {
           newIndices[index] = (newIndices[index] + 1) % imagesByPosition[index].length;
           return newIndices;
         });
-      }, 6000 + index * 1000); // Each image rotates at different intervals (staggered)
+      }, 6000 + index * 1000);
     });
 
     return () => intervals.forEach(clearInterval);
