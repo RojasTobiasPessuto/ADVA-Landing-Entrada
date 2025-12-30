@@ -10,7 +10,7 @@ export default function Pricing() {
   const tickets = [
     {
       name: "Standard",
-      price: "USD 290",
+      price: "USD 390",
       features: [
         "Ingreso general al evento",
         "Acceso a todas las conferencias",
@@ -23,7 +23,7 @@ export default function Pricing() {
     },
     {
       name: "VIP",
-      price: "USD 490",
+      price: "USD 590",
       features: [
         "Todo lo incluido en Standard",
         "Ubicación preferencial en conferencias",
@@ -37,7 +37,7 @@ export default function Pricing() {
     },
     {
       name: "Gold",
-      price: "USD 690",
+      price: "USD 790",
       features: [
         "Experiencia completa GOLD",
         "Máximo nivel de integración",
