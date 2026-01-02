@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export default function BiohackingVideo() {
   return (
-    <section className="py-24 bg-gray-50" id="evento">
+    <section className="py-24" id="evento">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Text content */}
         <div className="max-w-4xl mx-auto text-center">
@@ -15,10 +15,10 @@ export default function BiohackingVideo() {
             className="max-w-4xl mx-auto text-center mb-16"
           >
             <h2 className="section-title mb-8">¿Biohacking no es para ti?</h2>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className=" mb-6 leading-relaxed">
               Tal vez viste la palabra biohacking y pensaste que no era para ti. Que es solo para atletas de élite, ejecutivos obsesionados con la productividad o personas con acceso a tecnologías caras.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className=" leading-relaxed">
               Este espacio está diseñado para ayudarte a recuperar energía, foco y control sobre tu salud a largo plazo. Sin extremos. Sin gurús. Solo herramientas reales.
             </p>
           </motion.div>

@@ -102,7 +102,7 @@ export default function Speakers() {
   const experienceLeaders = ['Nicolás Ogues', 'Irina Sbaglia', 'Jorge Patrono', 'María Keto', 'Paula Soriano', 'Lis Sikorki'];
 
   return (
-    <section className="py-24 bg-white" id="speakers">
+    <section className="py-24" id="speakers">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
@@ -193,7 +193,7 @@ export default function Speakers() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <h4 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-500">EVENTO CONDUCIDO POR</h4>
+          <h4 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-1200">EVENTO CONDUCIDO POR</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 max-w-4xl mx-auto overflow-hidden rounded-2xl">
             {hosts.map((host, index) => (
               <motion.div
@@ -218,7 +218,7 @@ export default function Speakers() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h4 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-500">EXPERIENCIAS A CARGO DE</h4>
+          <h2 className="text-center mb-10 tracking-[0.2em] text-sm text-gray-1200">EXPERIENCIAS A CARGO DE</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-gray-200 max-w-4xl mx-auto overflow-hidden rounded-2xl">
             {experienceLeaders.map((leader, index) => (
               <motion.div

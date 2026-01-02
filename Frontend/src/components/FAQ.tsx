@@ -63,7 +63,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-24 bg-white" id="faq">
+    <section className="py-24" id="faq">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left side - Header & CTA */}
@@ -83,7 +83,7 @@ export default function FAQ() {
             {/* BOTÓN CON PALPITO */}
             <motion.button
               onClick={() => scrollToSection("entradas")}
-              className="inline-block bg-[#FF4E2F] text-white px-8 py-4 rounded-full"
+              className="inline-block bg-black text-white px-8 py-4 rounded-full"
               animate={{
                 scale: [1, 1.06, 1],
                 boxShadow: [
@@ -99,8 +99,8 @@ export default function FAQ() {
               }}
               whileHover={{
                 scale: 1.1,
-                boxShadow: "0px 18px 44px rgba(0,0,0,0.28)",
-                backgroundColor: "#FF3204",
+                boxShadow: "0px 18px 44px rgba(0,0,0,0.35)",
+                backgroundColor: "#111827", // gray-900
               }}
               whileTap={{ scale: 0.98 }}
             >

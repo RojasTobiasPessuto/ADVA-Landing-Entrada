@@ -18,7 +18,7 @@ export default function Sponsors() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50" id="sponsors">
+    <section className="py-24" id="sponsors">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div

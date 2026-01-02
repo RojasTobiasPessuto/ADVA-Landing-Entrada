@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import eventImage from '../assets/biohacking.png';
 
 export default function ReferenceBlock() {
-  const eventDate = new Date('2025-12-26T00:00:00');
+  const eventDate = new Date('2026-02-21T00:00:00');
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -44,7 +44,7 @@ export default function ReferenceBlock() {
   ];
 
   return (
-    <section className="py-24 bg-white" id="referencia">
+    <section className="py-24" id="referencia">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Countdown Timer */}
         <motion.div
@@ -114,16 +114,16 @@ export default function ReferenceBlock() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-1200 mb-6 leading-relaxed">
               Una experiencia presencial intensiva donde la ciencia deja de ser abstracta y se convierte en decisiones prácticas para tu vida diaria.
             </p>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-1200 mb-6 leading-relaxed">
               Podrás integrar conocimiento, tecnología y experiencias corporales para entender cómo funciona tu cuerpo hoy, qué lo está desgastando y cómo diseñar una salud que se sostenga en el tiempo.
             </p>
-            <p className="text-gray-700 mb-6 leading-relaxed">
+            <p className="text-gray-1200 mb-6 leading-relaxed">
               No se trata de aprender teoría.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-1200 leading-relaxed">
               Se trata de aprender a leer tu cuerpo, interpretar señales reales y elegir qué optimizar… y qué dejar de forzar.
             </p>
           </motion.div>

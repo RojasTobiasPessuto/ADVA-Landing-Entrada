@@ -30,7 +30,7 @@ export default function ExperienceCards() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50" id="experiencia">
+    <section className="py-24" id="experiencia">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

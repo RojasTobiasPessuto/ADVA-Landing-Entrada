@@ -1,3 +1,4 @@
+
 @custom-variant dark (&:is(.dark *));
 @font-face {
   font-family: "Space Mono";
@@ -159,7 +160,7 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-transparent text-foreground;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-primary), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
@@ -316,4 +317,10 @@ html {
       font-size: 1rem !important;
     }
   }
+}
+
+/* ✅ Ensure gradient can be seen */
+html, body, #root {
+  height: 100%;
+  background: transparent !important;
 }

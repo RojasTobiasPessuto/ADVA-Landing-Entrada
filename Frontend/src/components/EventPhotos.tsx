@@ -59,7 +59,7 @@ export default function EventPhotos() {
   };
 
   return (
-    <section className="py-24 bg-white" id="galeria">
+    <section className="py-24" id="galeria">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div

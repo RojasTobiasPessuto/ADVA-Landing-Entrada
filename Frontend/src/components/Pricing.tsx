@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Check } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import eventImage from '../assets/unnamed.png';
 
 const CHECKOUT_URL =
@@ -23,7 +23,7 @@ export default function Pricing() {
     },
     {
       name: "VIP",
-      price: "USD 590",
+      price: "USD 790",
       features: [
         "Todo lo incluido en Standard",
         "Ubicación preferencial en conferencias",
@@ -37,7 +37,7 @@ export default function Pricing() {
     },
     {
       name: "Gold",
-      price: "USD 790",
+      price: "USD 690",
       features: [
         "Experiencia completa GOLD",
         "Máximo nivel de integración",
@@ -51,10 +51,17 @@ export default function Pricing() {
       link: CHECKOUT_URL,
       highlighted: false,
     },
+    {
+      name: "Streaming",
+      price: "USD ***",
+      features: [],
+      link: CHECKOUT_URL,
+      highlighted: false,
+    },
   ];
 
   return (
-    <section className="py-24 bg-gray-50" id="entradas">
+    <section className="py-24" id="entradas">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Event Info Block */}
         <motion.div
@@ -78,16 +85,21 @@ export default function Pricing() {
 
             {/* Text */}
             <div className="order-1 md:order-2">
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                El <strong>Biohacking & Longevity Summit 2026</strong> es un
-                encuentro presencial de un solo día, diseñado para trabajar con
-                profundidad, atención y coherencia entre ciencia, experiencia y
+              <p className="text-gray-1200 mb-6 leading-relaxed">
+                El{" "}
+                <strong>
+                  Biohacking & Longevity Summit 2026
+                </strong>{" "}
+                es un encuentro presencial de un solo día,
+                diseñado para trabajar con profundidad, atención
+                y coherencia entre ciencia, experiencia y
                 reflexión personal.
               </p>
-              <p className="text-gray-700 leading-relaxed">
-                Los cupos son limitados porque cada instancia del evento
-                (contenidos, experiencias y ponencias) está pensada para
-                acompañar procesos reales de observación y toma de decisiones en
+              <p className="text-gray-1200 leading-relaxed">
+                Los cupos son limitados porque cada instancia
+                del evento (contenidos, experiencias y
+                ponencias) está pensada para acompañar procesos
+                reales de observación y toma de decisiones en
                 vivo.
               </p>
             </div>
@@ -108,103 +120,194 @@ export default function Pricing() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            animate={{ scale: [1, 1.02, 1] }}
             className="inline-block mb-8"
           >
-            <div className="bg-black text-white px-8 py-4 rounded-full">
-              <p className="tracking-wider text-sm">⚡ LAS ENTRADAS SON LIMITADAS</p>
-            </div>
+            <motion.div
+              className="bg-black text-white px-8 py-4 rounded-full"
+              animate={{
+                scale: [1, 1.05, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <p className="tracking-wider text-sm">
+                ⚡ LAS ENTRADAS SON LIMITADAS
+              </p>
+            </motion.div>
           </motion.div>
-
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Un encuentro de un día completo. Cupos limitados para garantizar una
-            experiencia íntima y personalizada.
+            Un encuentro de un día completo. Cupos limitados
+            para garantizar una experiencia íntima y
+            personalizada.
           </p>
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {tickets.map((ticket, index) => {
-            const isVIP = ticket.highlighted;
-
-            return (
+        <div className="relative">
+          {/* Top Row - VIP destacado */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto mb-8"
+          >
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="relative bg-gradient-to-br from-black to-gray-800 rounded-3xl p-12 overflow-hidden group cursor-pointer"
+            >
+              {/* Animated background gradient */}
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-white rounded-3xl p-8 ${
-                  ticket.highlighted
-                    ? "ring-2 ring-black shadow-xl scale-105"
-                    : "shadow-lg hover:shadow-xl transition-shadow"
-                }`}
-              >
-                {ticket.highlighted && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#FF4E2F] text-white px-4 py-1 rounded-full text-sm">
-                    Más popular
+                className="absolute inset-0 bg-gradient-to-br from-[#FF4E2F]/20 via-transparent to-[#FF3204]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              />
+              
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <Sparkles className="text-[#FF4E2F]" size={24} />
+                    <h3 className="text-white">VIP</h3>
                   </div>
-                )}
-
-                <div className="mb-6">
-                  <h3 className="mb-2">{ticket.name}</h3>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl">{ticket.price}</span>
+                  <div className="bg-[#FF4E2F] text-white px-4 py-1 rounded-full text-sm">
+                    Más popular
                   </div>
                 </div>
 
-                <ul className="space-y-4 mb-8">
-                  {ticket.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
+                <div className="mb-8">
+                  <div className="text-white/80 text-sm mb-2">Experiencia Premium</div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-white text-5xl">USD 490</span>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4 mb-8">
+                  {tickets[1].features.map((feature, i) => (
+                    <div key={i} className="flex items-start gap-3">
                       <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#FF4E2F] rounded-full flex items-center justify-center">
                         <Check size={14} className="text-white" strokeWidth={3} />
                       </div>
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </li>
+                      <span className="text-white/90 text-sm">{feature}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
 
-                {/* BOTÓN CON PALPITO (en los 3) */}
                 <motion.a
-                  href={ticket.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block w-full py-4 rounded-full text-center transition-all duration-300 ${
-                    ticket.highlighted
-                      ? "bg-black text-white hover:bg-gray-800"
-                      : "border-2 border-black text-black hover:bg-black hover:text-white"
-                  }`}
-                  animate={{
-                    scale: isVIP ? [1, 1.06, 1] : [1, 1.04, 1],
-                    boxShadow: isVIP
-                      ? [
-                          "0px 0px 0px rgba(0,0,0,0)",
-                          "0px 14px 36px rgba(0,0,0,0.25)",
-                          "0px 0px 0px rgba(0,0,0,0)",
-                        ]
-                      : [
-                          "0px 0px 0px rgba(0,0,0,0)",
-                          "0px 10px 26px rgba(0,0,0,0.16)",
-                          "0px 0px 0px rgba(0,0,0,0)",
-                        ],
-                  }}
-                  transition={{
-                    duration: isVIP ? 1.8 : 2.2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: index * 0.15, 
-                  }}
-                  whileHover={{
-                    scale: 1.08,
-                    boxShadow: "0px 18px 44px rgba(0,0,0,0.30)",
-                  }}
-                  whileTap={{ scale: 0.98 }}
+                  href={tickets[1].link}
+                  className="block w-full py-4 rounded-full text-center bg-white text-black hover:bg-[#FF4E2F] hover:text-white transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  Comprar entrada
+                  Reservar entrada VIP
                 </motion.a>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Bottom Grid - Otros tickets */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Standard */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              whileHover={{ y: -8 }}
+              className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200 hover:border-black transition-all duration-300 cursor-pointer group"
+            >
+              <div className="mb-6">
+                <h3 className="mb-2">{tickets[0].name}</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl">{tickets[0].price}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 mb-8 min-h-[200px]">
+                {tickets[0].features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-black rounded-full flex items-center justify-center">
+                      <Check size={14} className="text-white" strokeWidth={3} />
+                    </div>
+                    <span className="text-gray-700 text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <motion.a
+                href={tickets[0].link}
+                className="block w-full py-3 rounded-full text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all duration-300"
+                whileTap={{ scale: 0.95 }}
+              >
+                Comprar
+              </motion.a>
+            </motion.div>
+
+            {/* Gold */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ y: -8 }}
+              className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200 hover:border-black transition-all duration-300 cursor-pointer group"
+            >
+              <div className="mb-6">
+                <h3 className="mb-2">{tickets[2].name}</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl">{tickets[2].price}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 mb-8 min-h-[200px]">
+                {tickets[2].features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="mt-0.5 flex-shrink-0 w-5 h-5 bg-[#FF4E2F] rounded-full flex items-center justify-center">
+                      <Check size={14} className="text-white" strokeWidth={3} />
+                    </div>
+                    <span className="text-gray-700 text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <motion.a
+                href={tickets[2].link}
+                className="block w-full py-3 rounded-full text-center bg-black text-white hover:bg-[#FF4E2F] transition-all duration-300"
+                whileTap={{ scale: 0.95 }}
+              >
+                Comprar
+              </motion.a>
+            </motion.div>
+
+            {/* Streaming */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ y: -8 }}
+              className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-gray-200 hover:border-black transition-all duration-300 cursor-pointer group"
+            >
+              <div className="mb-6">
+                <h3 className="mb-2">{tickets[3].name}</h3>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl">{tickets[3].price}</span>
+                </div>
+              </div>
+
+              <div className="min-h-[200px] flex items-center justify-center">
+                <p className="text-gray-500 text-center text-sm">
+                  Acceso completo al evento desde cualquier parte del mundo
+                </p>
+              </div>
+
+              <motion.div
+                className="block w-full py-3 rounded-full text-center border-2 border-gray-300 text-gray-400 cursor-not-allowed"
+              >
+                Disponible pronto
               </motion.div>
-            );
-          })}
+            </motion.div>
+          </div>
         </div>
 
         {/* Additional info */}
@@ -216,11 +319,12 @@ export default function Pricing() {
           className="text-center text-gray-600 text-sm"
         >
           <p>
-            Todas las entradas incluyen acceso al shop de productos wellness y
-            actividades presenciales.
+            Todas las entradas incluyen acceso al shop de
+            productos wellness y actividades presenciales.
           </p>
           <p className="mt-2">
-            Métodos de pago: transferencia, tarjetas de crédito y débito.
+            Métodos de pago: transferencia, tarjetas de crédito
+            y débito.
           </p>
         </motion.div>
       </div>
