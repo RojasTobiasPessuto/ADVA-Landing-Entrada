@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import eventImage from '../assets/biohacking.png';
 
 export default function ReferenceBlock() {
-  const eventDate = new Date('2026-02-21T00:00:00');
+  const eventDate = new Date('2026-02-21T08:30:00');
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
