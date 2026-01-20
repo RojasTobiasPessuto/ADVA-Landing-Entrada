@@ -165,7 +165,7 @@ export default function ExclusiveDinner() {
 
                   {/* CTA Button */}
                   <motion.a
-                    href="https://www.suticket.com/evento/311/biohacking-and-optimization-summit-2026"
+                    href="https://linkly.link/2XFcE"
                     className="block w-full bg-gradient-to-r from-[#FF4E2F] to-[#FF3204] text-white py-5 rounded-full text-center text-lg hover:shadow-2xl hover:shadow-[#FF4E2F]/50 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
